@@ -3,7 +3,7 @@
 
 
 <% @movies.each do |movie| %>
-  <article>
+  <article class="movie">
     <header>
     <%= image_for(movie)%>
       <h2><%= link_to(movie.title, movie) %></h2>
