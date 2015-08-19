@@ -10,6 +10,7 @@ class Movie < ActiveRecord::Base
   }
   validates :rating, inclusion: {in: RATINGS}
 
+  has_many :reviews, dependent: :destroy
 
   def self.released
     where("released_on <= ?", Time.now).order("released_on desc")
