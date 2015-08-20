@@ -31,4 +31,9 @@ class Movie < ActiveRecord::Base
   def flop?
     total_gross.blank? || total_gross < 50000000
   end
+
+  def average_stars
+    reviews.average(:stars)
+  end
+
 end
