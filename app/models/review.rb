@@ -5,5 +5,4 @@ class Review < ActiveRecord::Base
   validates :stars, inclusion: { in: STARS, message: "Must be between 1 and 5"}
 
   belongs_to :movie
-
 end
