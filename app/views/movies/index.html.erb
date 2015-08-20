@@ -6,6 +6,7 @@
           <%= image_for(movie) %>
           <h2><%= link_to movie.title, movie %> (<%= movie.released_on.year %>)</h2>
           <h3><%= movie.cast %></h3>
+          <h3><%= link_to(pluralize(movie.reviews.count, "Review"), movie_reviews_path(movie)) %></h3>
         </header>
         <p>
           <%= truncate(movie.description, length: 150, separator: ' ') %>
